@@ -41,14 +41,14 @@ class OrderBookStream {
   produceData(): TOrderBookStream {
     const buy: TOrder[] = Array.from({ length: 10 }, () => {
       return {
-        price: faker.commerce.price(undefined, 499),
+        price: faker.commerce.price(undefined, 499, 2, undefined),
         amount: faker.finance.amount(undefined, 100),
       }
     })
 
     const sell: TOrder[] = Array.from({ length: 10 }, () => {
       return {
-        price: faker.commerce.price(500),
+        price: faker.commerce.price(500, undefined, 2, undefined),
         amount: faker.finance.amount(undefined, 100),
       }
     })
