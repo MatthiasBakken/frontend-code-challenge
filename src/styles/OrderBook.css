@@ -1,0 +1,47 @@
+.book__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book__container .book__content-container {
+  width: 50vw;
+  border-left: 10px solid #149bb3;
+}
+.book__container .book__content-container h2 {
+  color: white;
+  display: flex;
+  justify-self: flex-start;
+  padding-left: 20px;
+}
+
+.book__trans-container .book__title {
+  color: #bebebe;
+}
+.book__trans-container .book__table-titles {
+  display: flex;
+  justify-content: space-around;
+  background: #149bb3;
+  border-left: 2px solid #14202c;
+}
+.book__trans-container .book__price-amt-vol {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: white;
+  border-top: 1px solid #149bb3;
+  border-bottom: 1px solid #149bb3;
+}
+.book__trans-container .book__price-amt-vol .buy {
+  color: #ac0e0e;
+  font-weight: bold;
+}
+.book__trans-container .book__price-amt-vol .sell {
+  color: #149bb3;
+  font-weight: bold;
+}
+.book__trans-container .book__price-amt-vol p {
+  padding: 0px 10px 0 10px;
+}
+
+/*# sourceMappingURL=OrderBook.css.map */

@@ -1,0 +1,19 @@
+.form__container {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0px 10px 0px;
+	.form__form {
+		width: 50vw;
+		display: flex;
+		justify-content: space-around;
+		select {
+			font-size: 16px;
+		}
+		input {
+			font-size: 16px;
+		}
+		button {
+			font-size: 16px;
+		}
+	}
+}

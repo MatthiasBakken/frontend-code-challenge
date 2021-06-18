@@ -1,0 +1,47 @@
+.book__container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.book__content-container {
+		width: 50vw;
+		border-left: 10px solid rgb(20, 155, 179);
+		h2 {
+			color: white;
+			display: flex;
+			justify-self: flex-start;
+			padding-left: 20px;
+		}
+	}
+}
+
+.book__trans-container {
+	.book__title {
+		color: rgb(190, 190, 190);
+	}
+	.book__table-titles {
+		display: flex;
+		justify-content: space-around;
+		background: rgb(20, 155, 179);
+		border-left: 2px solid #14202c;
+	}
+	.book__price-amt-vol {
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		color: white;
+		border-top: 1px solid rgb(20, 155, 179);
+		border-bottom: 1px solid rgb(20, 155, 179);
+		.buy {
+			color: rgb(172, 14, 14);
+			font-weight: bold;
+		}
+		.sell {
+			color: rgb(20, 155, 179);
+			font-weight: bold;
+		}
+		p {
+			padding: 0px 10px 0 10px;
+		}
+	}
+}

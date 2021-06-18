@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { TOrder, TSide } from './order-book-stream'
 
+import '../src/styles/OrderForm.css';
+
+
+const FORM = "form__";
+
 export type TOrderForm = {
   submitOrder: (side: TSide, { price, amount }: TOrder) => void
 }
@@ -16,22 +21,24 @@ const initialFormData: TOrderFormData = {
 }
 
 const OrderForm: React.FC<TOrderForm> = ({ submitOrder }) => {
-  const [formData, updateFormData] = useState<TOrderFormData>(initialFormData)
+  const [formData, setFormData] = useState<TOrderFormData>(initialFormData)
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement & HTMLSelectElement>
   ) => {
-    updateFormData({
+    setFormData({
       ...formData,
       [event.target.name]: event.target.value.trim(),
     })
   }
 
   return (
-    <div>
+    <div className={`${FORM}container`}>
       <form
+        className={`${FORM}form`}
         onSubmit={(event) => {
           event.preventDefault()
+          console.log('formData', formData );
           submitOrder(formData.side, {
             price: formData.price,
             amount: formData.amount,
@@ -42,9 +49,9 @@ const OrderForm: React.FC<TOrderForm> = ({ submitOrder }) => {
           <option value="buy">Buy</option>
           <option value="sell">Sell</option>
         </select>
-        <input name="price" type="number" onChange={handleChange} />
-        <input name="amount" type="number" onChange={handleChange} />
-        <button>Submit</button>
+        <input className={`${FORM}input`} name="price" type="float" onChange={handleChange} placeholder="Price" />
+        <input className={`${FORM}input`} name="amount" type="float" onChange={handleChange} placeholder="Amount" />
+        <button className={`${FORM}button`}>Submit</button>
       </form>
     </div>
   )

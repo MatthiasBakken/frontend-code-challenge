@@ -1,0 +1,21 @@
+.form__container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 10px 0px;
+}
+.form__container .form__form {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+.form__container .form__form select {
+  font-size: 16px;
+}
+.form__container .form__form input {
+  font-size: 16px;
+}
+.form__container .form__form button {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=OrderForm.css.map */
