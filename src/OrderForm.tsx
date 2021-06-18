@@ -28,7 +28,7 @@ const OrderForm: React.FC<TOrderForm> = ({ submitOrder }) => {
   ) => {
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value.trim(),
+      [event.target.name]: event.target.value.replace(/[^\d]/g, "").trim(),
     })
   }
 
@@ -42,7 +42,8 @@ const OrderForm: React.FC<TOrderForm> = ({ submitOrder }) => {
           submitOrder(formData.side, {
             price: formData.price,
             amount: formData.amount,
-          })
+          } )
+          setFormData( initialFormData );
         }}
       >
         <select name="side" onChange={handleChange}>
@@ -51,7 +52,7 @@ const OrderForm: React.FC<TOrderForm> = ({ submitOrder }) => {
         </select>
         <input className={`${FORM}input`} name="price" type="float" onChange={handleChange} placeholder="Price" />
         <input className={`${FORM}input`} name="amount" type="float" onChange={handleChange} placeholder="Amount" />
-        <button className={`${FORM}button`}>Submit</button>
+        <button disabled={Number(formData.price) <= 0 || Number(formData.amount) <= 0} className={`${FORM}button`}>Submit</button>
       </form>
     </div>
   )

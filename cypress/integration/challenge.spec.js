@@ -27,10 +27,25 @@ describe( 'Frontend Challenge', () => {
       .should( 'exist' );
     AppDiv()
       .should( 'be.visible' );
-  })
+  } );
 
 
+  /********* Form Renders and Functions Correctly *** Form Renders and Functions Correctly *** Form Renders and Functions Correctly *********/
+  
+  // Form: Benign elements
+  const formContainerDiv = () => cy.get( `div[class="form__container"]` );
+  const form = () => cy.get( `form[class="form__form"]` );
 
+  // Form: inputs
+  const buyOrSellSelector = () => cy.get( `select[name="side"]` );
+  const buyOption = () => cy.get( `option[value="buy"]` );
+  const sellOption = () => cy.get( `option[value="sell"]` );
+  const priceInput = () => cy.get( `input[name="price"]` );
+  const amountInput = () => cy.get( `input[name="amount"]` );
+
+  // Form: Buttons/Links
+  const formSubmitButton = () => cy.get( `button[class="form__button"]` );
+  
 //   it( 'HEADER-LOGGED-OUT: all benign elements do/dont exist', () => {
 //     headerContainerDiv()
 //       .should( 'exist' );
