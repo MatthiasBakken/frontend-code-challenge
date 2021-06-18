@@ -1,10 +1,10 @@
 # Running my challenge submission
 
-yarn - in project root
-yarn start
-yarn cypress open - for running tests
-when cypress window opens, select challenge.spec.js in the integration test folder
-Enjoy!
+- yarn - in project root
+- yarn start
+- yarn cypress open - for running tests
+- when cypress window opens, select challenge.spec.js in - - the integration test folder
+- Enjoy!
 
 # Zipmex frontend code challenge
 
